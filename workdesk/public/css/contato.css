@@ -1,0 +1,9 @@
+.conteiner {
+    text-align: center;
+    padding: 50px;
+    display: flex;
+}
+
+.conteiner-fluid{
+    padding: 100px;
+}

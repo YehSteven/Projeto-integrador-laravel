@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Sniglet,sans-serif;
+    font-size: 18px;
+}
+.container-fluid {
+    padding: 0;
+}
+section.main-content {
+    background-image: url('../img/mesaTrabalho.jpg');
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    color: rgb(0, 0, 0);
+}
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+.btn-dark:hover {
+    background-color: darkred;
+}
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.informacoes {
+    height: 60vh;
+}
+
+.offer {
+    height: 50vh;
+    background-color: #8c654c;
+}
+
+.offer .icons i.fa, .fab{
+    background-color: #fff;
+    color: #8c654c;
+    font-size: 3em;
+    border-radius: 50%;
+    padding: 24px;
+    transition: all 0.8s ease-in-out;
+}
+.offer .icons i.fa:hover, .fab:hover{
+    background-color: #8c654c;
+    color: #fff;
+}
+.offer .icons .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plus {
+    height: 65vh; /* viewport height */
+    display: flex; /* d-flex do Bootstrap */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #d4c1a1;
+    background-image: url('../img/brickWall.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.plus div {
+    color:#000000;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.fa-angle-double-down {
+    background-color: #3e397a;
+    color: #fff;
+    font-size: 3em;
+    border-radius: 50%;
+    padding: 15px 24px;
+    margin-bottom: 3vh;
+    transition: all 0.8s ease-in-out;
+}
+
+.fa-angle-double-down:hover {
+    background-color: #fff;
+    color: #3e397a;
+}
+.title p {
+    text-align: center;
+}
+
+.products {
+    height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin: 120px auto;
+}
+
+.products, .products .handler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product {
+    height: 36vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: #fff;
+    transition: all 0.4s linear;
+    background-position: center;
+}
+.product:hover {
+    cursor: pointer;
+    filter: grayscale(60%);
+    transform: scale(0.9);
+}
+.copy {
+    color: #fff;
+    text-align: center;
+}
+
+.link {
+    text-decoration: white;
+}
+
+.contact-list {
+    color: #fff;
+    text-decoration-style: none;
+}
+  
+.nav-list {
+    color: #fff;
+    list-style: none;
+    text-decoration:none;
+}
+  
+  /* CUSTOMIZE THE CAROUSEL
+  -------------------------------------------------- */
+  
+  /* Carousel base class */
+  .carousel {
+    margin-bottom: 0rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 32rem;
+  }
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+  }
+
+  .carrosel1{
+    background-image: url(../img/easy.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #343a40;
+    }
+
+  .carrosel2{
+    background-image: url(../img/mobilidade.jpg);
+    background-size: cover;
+    background-position: center;
+    }
+
+  .carrosel3{
+      background-image: url(../img/fimDosPapeis.jpg);
+      background-size: cover;
+      background-position: bottom;
+    }
+  
