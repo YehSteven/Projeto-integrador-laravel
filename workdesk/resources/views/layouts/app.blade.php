@@ -24,12 +24,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Nosso estilo -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contato.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/cadastros.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
     <div id="app">
@@ -169,6 +167,6 @@
             }
         });
         </script>
-    </div>
+
 </body>
 </html>

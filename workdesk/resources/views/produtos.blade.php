@@ -203,5 +203,6 @@
               </div>
             </div>
           </div>
+        </main>
 
 @endsection

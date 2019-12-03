@@ -31,12 +31,7 @@
                     Produtos
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="precos.php">
-                    <span data-feather="bell"></span>
-                    Tabelas de preços
-                  </a>
-                </li>
+
               </ul>
             </div>
           </nav>
@@ -44,7 +39,7 @@
           <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
               <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             
-                  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" >
                       <a class="nav-link" href="distribuidores.php">
                       <div class="card-body"  >
                           <h5 class="card-title">Distribuidores</h5>
@@ -53,7 +48,7 @@
                   </div>
   
                   <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                  <a class="nav-link" href="fabricantes.php">
+                  <a class="nav-link linkCaixas" href="fabricantes.php" >
                       <div class="card-body"  >
                           <h5 class="card-title">Fabricantes</h5>
                           <p class="card-text">Acompanhe e gerencie o cadastro dos seus fabricantes</p>
@@ -68,13 +63,7 @@
                       </div>
                   </div>
   
-                  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                      <a class="nav-link" href="precos.php">
-                      <div class="card-body"  >
-                          <h5 class="card-title">Tabelas de preços</h5>
-                          <p class="card-text">Acompanhe e gerencie suas tabelas de preços</p>
-                      </div>
-                  </div>
+
   
               </div>
           </main>
