@@ -9,9 +9,7 @@ use App\Fabricante;
 class FabricanteController extends Controller
 {
     public function index(){
-        $user_id = Auth::user()->id;
-        $contacts = Contact::where('user_id', '=', $user_id)->paginate(10);
-        return view('fabricante.index')->with('fabricantes', $fabricantes);
+        return view('fabricantes.index');
     }
 
     public function show($id){
@@ -21,65 +19,63 @@ class FabricanteController extends Controller
     }
 
     public function create(){
-        return view('fabricante.create');
+        return view('fabricantes.index');
     }
 
-    public function store (Request $request){
+    public function store(Request $request){
+        
         $request->validate([
             'cnpj' => 'required|max:14',
+            'razao_social' => 'required|max:50',
+            'nome_fantasia' => 'required|max:50',
+            'logradouro' => 'required|max:60',
+            'numero' => 'required|max:15',
+            'cidade' => 'required|max:25',
+            'estado' => 'required|max:2',
+            'cep' => 'required|max:8'
+        ]);
 
+        $fabricante = Fabricante::create([
+            'cnpj' => $request->input('cnpj'),
+            'razao_social' => $request->input('razao_social'),
+            'nome_fantasia' => $request->input('nome_fantasia'),
+            'logradouro' => $request->input('logradouro'),
+            'numero' => $request->input('numero'),
+            'cidade' => $request->input('cidade'),
+            'estado' => $request->input('estado'),
+            'cep' => $request->input('cep')
+        ]);
             
-        ]);
-
-
-        $fabricantes = Fabricante::create([
-            'cnpj' => $request->input('nome'),
-            'last_name' => $request->input('sobrenome'),
-            'telephone' => $request->input('telefone'),
-            'email' => $request->input('email'),
-            'avatar' => $caminhoRelativo,
-            'user_id' => Auth::user()->id
-        ]);
-
-        return redirect('/contacts/show/' . $contact->id);
+        return redirect('/fabricantes');
     }
 
     public function edit($id){
-        $contact = Contact::find($id);
+        $fabricantes = Fabricante::find($id);
 
-        return view('contact.edit')->with('contact', $contact);
+        return view('fabricante.edit')->with('fabricantes', $fabricantes);
     }
 
     public function update(Request $request, $id){
-        $contact = Contact::find($id);
+        $fabricantes = Fabricante::find($id);
 
         $request->validate([
-            'nome' => 'required|max:60',
-            'sobrenome' => 'required|max:60',
-            'telefone' => 'required|max:11',
-            'email' => 'email|max:80',
-            'avatar' => 'nullable|sometimes|image|mimes:jpg,jpeg,png,gif'   
+            'cnpj' => 'required|max:14',
+
         ]);
 
-        $avatar = $request->file('avatar');
-        if (empty($avatar)) {
-            $caminhoRelativo = $contact->avatar;
-        } else {
-            $avatar->storePublicly('uploads');
-            $caminhoAbsoluto = public_path()."/storage/uploads";
-            $nomeArquivo = $avatar->getClientOriginalName();
-            $caminhoRelativo = "storage/uploads/$nomeArquivo";
-            $avatar->move($caminhoAbsoluto, $nomeArquivo);
-        }
 
-        $contact->first_name = $request->input('nome');
-        $contact->last_name = $request->input('sobrenome');      
-        $contact->telephone = $request->input('telefone');
-        $contact->email = $request->input('email');
-        $contact->avatar = $caminhoRelativo;
+        $fabricantes->cnpj = $request->input('cnpj');
+        $fabricantes->razaoSocial = $request->input('razaoSocial');
+        $fabricantes->nomeFantasia = $request->input('nomeFantasia');
+        $fabricantes->logradouro = $request->input('logradouro');
+        $fabricantes->numero = $request->input('numero');
+        $fabricantes->cidade = $request->input('cidade');
+        $fabricantes->estado = $request->input('estado');
+        $fabricantes->cep = $request->input('cep');
 
-        $contact->save();
 
-        return redirect('/contacts/show/' . $contact->id);
+        $fabricantes->save();
+
+        return redirect('/fabricantes' . $fabricantes->id);
     }
 }

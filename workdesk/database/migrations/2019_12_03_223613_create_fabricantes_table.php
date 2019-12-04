@@ -16,8 +16,8 @@ class CreateFabricantesTable extends Migration
         Schema::create('fabricantes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('cnpj', 14);
-            $table->string('razaoSocial', 50);
-            $table->string('nomeFantasia', 50);
+            $table->string('razao_social', 50);
+            $table->string('nome_fantasia', 50);
             $table->string('logradouro', 60);
             $table->string('numero', 15);
             $table->string('cidade', 25);

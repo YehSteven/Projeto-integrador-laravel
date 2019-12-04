@@ -128,13 +128,15 @@
       <h2>Adicionar Fabricante</h2>
       
       <!-- Usei o formulário Bootstrap Server-side em https://getbootstrap.com.br/docs/4.1/components/forms/#server-side -->
-      <form>
+      <form method="POST" action="/fabricantes/adicionar">
+        @csrf
+        {{ method_field('POST') }}
         <div class="form-row">
           
           <div class="col-md-4 mb-3">
-            <label for="validationServerCNPJ">CNPJ</label>
+            <label for="cnpj">CNPJ</label>
             <div class="input-group">
-              <input type="text" class="form-control is-invalid" id="validationServerCNPJ" placeholder="CNPJ" aria-describedby="inputGroupPrepend3" required>
+              <input name="cnpj" type="text" class="form-control is-invalid"  id="cnpj" placeholder="CNPJ" aria-describedby="inputGroupPrepend3" required>
               <div class="invalid-feedback">
                 Por favor, digite um CNPJ.
               </div>
@@ -142,9 +144,9 @@
           </div>
             
           <div class="col-md-4 mb-3">
-            <label for="validationRazaoSocial">Razão Social</label>
+            <label for="razao_social">Razão Social</label>
             <div class="input-group">
-              <input type="text" class="form-control is-invalid" id="validationRazaoSocial" placeholder="Razão Social" aria-describedby="inputGroupPrepend3" required>
+              <input name="razao_social" type="text" class="form-control is-invalid" id="razao_social" placeholder="Razão Social" aria-describedby="inputGroupPrepend3">
               <div class="invalid-feedback">
                 Por favor, digite a Razão Social.
               </div>
@@ -152,49 +154,49 @@
           </div>
          
           <div class="col-md-4 mb-3">
-            <label for="validationNomeFantasia">Nome Fantasia</label>
-            <input type="text" class="form-control is-valid" id="validationNomeFantasia" placeholder="Nome Fantasia" value="Empresa Xpto" required>
+            <label for="nome_fantasia">Nome Fantasia</label>
+            <input name="nome_fantasia" type="text" class="form-control is-valid" id="nome_fantasia" placeholder="Nome Fantasia" value="Empresa Xpto" required>
             <div class="valid-feedback">
               Tudo certo!
             </div>
           </div>
             
           <div class="col-md-4 mb-3">
-            <label for="validationServer01">Logradouro</label>
-            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Logradouro" value="Rua das Flores" required>
+            <label for="logradouro">Logradouro</label>
+            <input name="logradouro" type="text" class="form-control is-valid" id="logradouro" placeholder="Logradouro" value="Rua das Flores" required>
             <div class="valid-feedback">Tudo certo!</div>
           </div>
   
           <div class="col-md-4 mb-3">
-            <label for="validationServer01">Número</label>
-            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="numero" value="123" required>
+            <label for="numero">Número</label>
+            <input name="numero" type="text" class="form-control is-valid" id="numero" placeholder="numero" value="123" required>
             <div class="valid-feedback">Tudo certo!</div>
           </div>
   
           <div class="col-md-4 mb-3">
-            <label for="validationServer01">Bairro</label>
-            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Bairro" value="Centro" required>
+            <label for="bairro">Bairro</label>
+            <input name="bairro" type="text" class="form-control is-valid" id="bairro" placeholder="Bairro" value="Centro" required>
             <div class="valid-feedback">Tudo certo!</div>
           </div>
   
           <div class="form-row">
             <div class="col-md-6 mb-3">
-              <label for="validationServer03">Cidade</label>
-              <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Cidade" required>
+              <label for="cidade">Cidade</label>
+              <input name="cidade" type="text" class="form-control is-invalid" id="cidade" placeholder="Cidade" required>
               <div class="invalid-feedback">
                 Por favor, informe uma cidade válida.
               </div>
             </div>
             <div class="col-md-3 mb-3">
-              <label for="validationServer04">Estado</label>
-              <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Estado" required>
+              <label for="estado">Estado</label>
+              <input name="estado" type="text" class="form-control is-invalid" id="estado" placeholder="Estado" required>
               <div class="invalid-feedback">
                 Por favor, informe um estado válido.
               </div>
             </div>
             <div class="col-md-3 mb-3">
-              <label for="validationServer05">CEP</label>
-              <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="CEP" required>
+              <label for="cep">CEP</label>
+              <input name="cep" type="text" class="form-control is-invalid" id="cep" placeholder="CEP" required>
               <div class="invalid-feedback">
                 Por favor, informe um CEP válido.
               </div>
@@ -203,8 +205,8 @@
   
         </div>
         
-        <button class="btn btn-secondary" type="data-dismiss" data-toggle="modal" data-target="#excluirAlteracoes">Fechar</button>
         <button class="btn btn-primary" type="submit">Adicionar Fabricante</button>
+      </form>
         
           <!-- Modal excluir alterações-->
           <div class="modal fade" id="excluirAlteracoes" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">

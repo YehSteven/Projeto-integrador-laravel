@@ -31,9 +31,9 @@ Route::get('/cadastros', function () {
     return view('cadastros');
 });
 
-Route::get('/fabricantes', function () {
-    return view('fabricantes');
-});
+Route::get('/fabricantes/adicionar', 'FabricanteController@create');
+Route::post('/fabricantes/adicionar', 'FabricanteController@store');
+
 
 Route::get('/novoPedido', function () {
     return view('novoPedido');
