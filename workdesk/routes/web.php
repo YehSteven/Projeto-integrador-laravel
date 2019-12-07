@@ -31,17 +31,18 @@ Route::get('/cadastros', function () {
     return view('cadastros');
 });
 
+Route::get('/fabricantes', 'FabricanteController@index');
 Route::get('/fabricantes/adicionar', 'FabricanteController@create');
 Route::post('/fabricantes/adicionar', 'FabricanteController@store');
-
 
 Route::get('/novoPedido', function () {
     return view('novoPedido');
 });
 
-Route::get('/produtos', function () {
-    return view('produtos');
-});
+Route::get('/produtos', 'ProdutosController@index')->name('produtos.index');
+Route::get('/produtos/excluir/{$id}', 'ProdutosController@excluir')->name('produtos.excluir');
+Route::get('/produtos/adicionar', 'ProdutosController@create');
+Route::post('/produtos/adicionar', 'ProdutosController@store');
 
 Route::get('/verPedido', function () {
     return view('verPedido');
