@@ -36,6 +36,7 @@
           </nav>  
     
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Distribuidores cadastrados</h1>
       </div>
@@ -48,48 +49,50 @@
             <th scope="col">CNPJ</th>
             <th scope="col">Razão Social</th>
             <th scope="col">Nome Fantasia</th>
-            <th scope="col">Editar</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td scope="row">1</th>
-            <td>123.456.678.0001/12</td>
-            <td>XXX LTDA</td>
-            <td>Cliente 1</td>
-            <td>
-              <!-- Botão para acionar modal de exclusão -->
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluirFabricante">
-              Excluir Distribuidor
-              </button>
-            </td>
-          </tr>
+          @foreach ($distribuidores as $distribuidor)
+            <tr>
+              <td scope="row">{{ $distribuidor->id }}</th>
+              <td>{{ $distribuidor->cnpj }}</td>
+              <td>{{ $distribuidor->razaoSocial }}</td>
+              <td>{{ $distribuidor->nomeFantasia }}</td>
+              <td>
+                <!-- Botão para acionar modal de exclusão -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluirDistribuidor{{ $distribuidor->id }}">
+                  Excluir
+                </button>
+                <!-- Modal excluir distribuidor-->
+                <div class="modal fade" id="excluirDistribuidor{{ $distribuidor->id }}" tabindex="-1" role="dialog" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="TituloModalCentralizado">Atenção!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                          Tem certeza que deseja excluir o distribuidor {{ $distribuidor->nomeFantasia }}?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="submit" class="btn btn-primary" formmethod="POST" formaction="/distribuidores/excluir/{{ $distribuidor->id }}">Excluir</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          @endforeach
         </tbody>
       </table>
+      {{ $distribuidores->links() }}
   
-      <!-- Modal excluir distribuidor-->
-      <div class="modal fade" id="excluirFabricante" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="TituloModalCentralizado">Atenção!</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                Tem certeza que deseja excluir o Distribuidor?
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-              <button type="button" class="btn btn-primary">Excluir</button>
-            </div>
-          </div>
-        </div>
-      </div>
 
+      <!-- Adionar distribuidor-->
       <div>    
-        <!-- Adionar formulário adcionar distribuidor-->
         <h2>Adicionar distribuidor</h2>
         
         <!-- Usei o formulário Bootstrap Server-side em https://getbootstrap.com.br/docs/4.1/components/forms/#server-side -->

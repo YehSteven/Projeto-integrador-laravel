@@ -31,13 +31,7 @@
                     Produtos
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="precos.php">
-                    <span data-feather="bell"></span>
-                    Tabelas de preços
-                  </a>
-                </li>
-                </ul>
+              </ul>
             </div>
           </nav>  
       
@@ -57,41 +51,39 @@
               </tr>
             </thead>
             <tbody>
-                @foreach ($produtos as $produto)
-                  <tr>
-                    <td scope="row">{{ $produto->nomeProduto }}</td>
-                    <td>{{ $produto->id }}</td>
-                    <td>{{ $produto->preco }}</td>
-                    <td>
-                      <!-- Botão para acionar modal de exclusão -->
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluirProduto{{ $produto->id }}">
-                      Excluir Produto
-                      </button>
-                    </td>
-                  </tr>
-                  
-                  <!-- Modal excluir Produto -->
-                  <div class="modal fade" id="excluirProduto{{ $produto->id }}" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="TituloModalCentralizado">Atenção!</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                            Tem certeza que deseja excluir o produto {{ $produto->nomeProduto }} ?
-                        </div>
-                        
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                          <a type="button" class="btn btn-primary" href="/produtos/excluir/{{ $produto->id }}">Excluir</a>
+              @foreach ($produtos as $produto)
+                <tr>
+                  <td scope="row">{{ $produto->nomeProduto }}</td>
+                  <td>{{ $produto->id }}</td>
+                  <td>{{ $produto->preco }}</td>
+                  <td>
+                    <!-- Botão para acionar modal de exclusão -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluirProduto{{ $produto->id }}">
+                      Excluir
+                    </button>
+                    <!-- Modal excluir Produto -->
+                    <div class="modal fade" id="excluirProduto{{ $produto->id }}" tabindex="-1" role="dialog" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="TituloModalCentralizado">Atenção!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                              Tem certeza que deseja excluir o produto {{ $produto->nomeProduto }} ?
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <button type="submit" class="btn btn-primary" formmethod="POST" formaction="/produtos/excluir/{{ $produto->id }}">Excluir</button>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                @endforeach
+                  </td>
+                </tr>
+              @endforeach
             </tbody>
           </table>
           {{ $produtos->links() }}
