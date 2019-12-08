@@ -95,8 +95,9 @@
       <div>    
         <h2>Adicionar distribuidor</h2>
         
-        <!-- Usei o formulário Bootstrap Server-side em https://getbootstrap.com.br/docs/4.1/components/forms/#server-side -->
-        <form>
+        <form method="POST" action="/distribuidores/adicionar">
+        @csrf
+        {{ method_field('POST') }}
           <div class="form-row">
             
             <div class="col-md-4 mb-3">
@@ -171,29 +172,7 @@
     
           </div>
           
-          <button class="btn btn-secondary" type="data-dismiss" data-toggle="modal" data-target="#excluirAlteracoes">Fechar</button>
-          <button class="btn btn-primary" type="submit">Adicionar Distribuidor</button>
-          
-            <!-- Modal excluir alterações-->
-            <div class="modal fade" id="excluirAlteracoes" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="TituloModalCentralizado">Atenção!</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                      Tem certeza que deseja excluir alterações?
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary">Excluir</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <button class="btn btn-primary" type="submit">Adicionar</button>
       </div>
     </main>
 

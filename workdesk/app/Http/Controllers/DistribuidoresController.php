@@ -22,4 +22,35 @@ class DistribuidoresController extends Controller
         return redirect('/distribuidores');
     }
     
+    public function create(){
+        return view('distribuidores.index');
+    }
+
+    public function store(Request $request){
+        
+        $request->validate([
+            'cnpj' => 'required|max:14',
+            'razaoSocial' => 'required|max:50',
+            'nomeFantasia' => 'required|max:50',
+            'logradouro' => 'required|max:60',
+            'numero' => 'required|max:15',
+            'cidade' => 'required|max:25',
+            'estado' => 'required|max:2',
+            'cep' => 'required|max:8'
+        ]);
+
+        $distribuidor = Distribuidor::create([
+            'cnpj' => $request->input('cnpj'),
+            'razaoSocial' => $request->input('razaoSocial'),
+            'nomeFantasia' => $request->input('nomeFantasia'),
+            'logradouro' => $request->input('logradouro'),
+            'numero' => $request->input('numero'),
+            'cidade' => $request->input('cidade'),
+            'estado' => $request->input('estado'),
+            'cep' => $request->input('cep')
+        ]);
+            
+        return redirect('/distribuidores');
+    }
+
 }

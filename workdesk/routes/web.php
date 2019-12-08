@@ -42,7 +42,7 @@ Route::get('/novoPedido', function () {
 Route::get('/produtos', 'ProdutosController@index')->name('produtos.index');
 Route::post('/produtos/excluir/{$id}', 'ProdutosController@excluir')->name('produtos.excluir');
 Route::get('/produtos/adicionar', 'ProdutosController@create');
-Route::post('/produtos/adicionar', 'ProdutosController@phpstore');
+Route::post('/produtos/adicionar', 'ProdutosController@store');
 
 Route::get('/verPedido', function () {
     return view('verPedido');
@@ -50,3 +50,5 @@ Route::get('/verPedido', function () {
 
 Route::get('/distribuidores', 'DistribuidoresController@index')->name('distribuidores.index');
 Route::post('/distribuidores/excluir/{$id}', 'DistribuidoresController@excluir')->name('distribuidores.excluir');
+Route::get('/distribuidores/adicionar', 'DistribuidoresController@create')->name('distribuidores.create');
+Route::post('/distribuidores/adicionar', 'DistribuidoresController@store')->name('distribuidores.store');
