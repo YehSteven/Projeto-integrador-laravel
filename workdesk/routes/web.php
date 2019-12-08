@@ -42,7 +42,7 @@ Route::get('/novoPedido', function () {
 Route::get('/produtos', 'ProdutosController@index')->name('produtos.index');
 Route::get('/produtos/excluir/{$id}', 'ProdutosController@excluir')->name('produtos.excluir');
 Route::get('/produtos/adicionar', 'ProdutosController@create');
-Route::post('/produtos/adicionar', 'ProdutosController@store');
+Route::post('/produtos/adicionar', 'ProdutosController@phpstore');
 
 Route::get('/verPedido', function () {
     return view('verPedido');
