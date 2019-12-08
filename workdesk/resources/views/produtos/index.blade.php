@@ -8,36 +8,30 @@
             <div class="sidebar-sticky">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link" href="cadastros.php">
+                  <a class="nav-link" href="/cadastros">
                     <span data-feather="home"></span>
                     Cadastros <span class="sr-only">(atual)</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="distribuidores.php">
+                  <a class="nav-link" href="/distribuidores">
                     <span data-feather="file"></span>
                     Distribuidores
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="fabricantes.php">
+                  <a class="nav-link" href="/fabricantes">
                     <span data-feather="shopping-cart"></span>
                     Fabricantes
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="produtos.php">
+                  <a class="nav-link active" href="/produtos">
                     <span data-feather="users"></span>
                     Produtos
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="precos.php">
-                    <span data-feather="bell"></span>
-                    Tabelas de preços
-                  </a>
-                </li>
-                </ul>
+              </ul>
             </div>
           </nav>  
       
