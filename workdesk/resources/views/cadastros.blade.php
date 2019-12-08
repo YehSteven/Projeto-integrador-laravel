@@ -40,7 +40,7 @@
               <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             
                   <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" >
-                      <a class="nav-link" href="distribuidores.php">
+                      <a class="nav-link" href="distribuidores">
                       <div class="card-body"  >
                           <h5 class="card-title">Distribuidores</h5>
                           <p class="card-text">Acompanhe e gerencie o cadastro dos seus distribuidores</p>
@@ -48,7 +48,7 @@
                   </div>
   
                   <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                  <a class="nav-link linkCaixas" href="fabricantes.php" >
+                  <a class="nav-link linkCaixas" href="fabricantes/adicionar" >
                       <div class="card-body"  >
                           <h5 class="card-title">Fabricantes</h5>
                           <p class="card-text">Acompanhe e gerencie o cadastro dos seus fabricantes</p>
@@ -56,7 +56,7 @@
                   </div>    
                   
                   <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                      <a class="nav-link" href="produtos.php">
+                      <a class="nav-link" href="produtos">
                       <div class="card-body"  >
                           <h5 class="card-title">Produtos</h5>
                           <p class="card-text">Acompanhe e gerencie os produtos que você vende</p>

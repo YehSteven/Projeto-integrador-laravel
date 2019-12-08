@@ -6,7 +6,7 @@
         <section class="main-content d-flex justify-content-center align-items-center flex-column">
             <h1>Workdesk</h1>
             <p>Agora nós representamos você!</p>
-            <a href="login.php" class="btn btn-dark">Acesso</a>
+            <a href="register" class="btn btn-dark">Acesso</a>
         </section>
 
         <div id="myCarousel" class="carousel slide" data-ride="carousel">

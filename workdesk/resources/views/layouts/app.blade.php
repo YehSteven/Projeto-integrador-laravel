@@ -53,7 +53,7 @@
                                 <a class="nav-link" href="#produto">Planos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contato.php">Contato</a>
+                                <a class="nav-link" href="contato">Contato</a>
                             </li>
                         </ul>
                     </div>
@@ -62,7 +62,7 @@
         @else
             <header>
                 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-                    <a class="navbar-brand" href="#top">
+                    <a class="navbar-brand" href="/">
                         <span>Workdesk</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -77,13 +77,13 @@
                                 <a class="nav-link" href="meusDados.php">Meus dados</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="cadastros.php">Cadastros</a>
+                                <a class="nav-link" href="cadastros">Cadastros</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="pedidos.php">Pedidos</a>
+                                <a class="nav-link" href="verPedido">Pedidos</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="dashboard.php">Relatórios</a>
+                                <a class="nav-link" href="dashboard">Relatórios</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="index.php">Sair</a>
