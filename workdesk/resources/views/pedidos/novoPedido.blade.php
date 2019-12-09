@@ -14,7 +14,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/novoPedido">
+            <a class="nav-link active" href="/pedidos/novoPedido">
               <span data-feather="layers"></span>
               Inserir Pedido
             </a>
