@@ -65,8 +65,8 @@ class FabricanteController extends Controller
 
 
         $fabricantes->cnpj = $request->input('cnpj');
-        $fabricantes->razaoSocial = $request->input('razaoSocial');
-        $fabricantes->nomeFantasia = $request->input('nomeFantasia');
+        $fabricantes->razao_social = $request->input('razao_social');
+        $fabricantes->nome_fantasia = $request->input('nome_fantasia');
         $fabricantes->logradouro = $request->input('logradouro');
         $fabricantes->numero = $request->input('numero');
         $fabricantes->cidade = $request->input('cidade');

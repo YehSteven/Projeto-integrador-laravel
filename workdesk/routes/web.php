@@ -45,6 +45,7 @@ Route::get('/produtos/adicionar', 'ProdutosController@create');
 Route::post('/produtos/adicionar', 'ProdutosController@store');
 
 
+
 Route::get('/distribuidores', 'DistribuidoresController@index')->name('distribuidores.index');
 Route::post('/distribuidores/excluir/{$id}', 'DistribuidoresController@excluir')->name('distribuidores.excluir');
 Route::get('/distribuidores/adicionar', 'DistribuidoresController@create')->name('distribuidores.create');
