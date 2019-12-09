@@ -31,25 +31,22 @@ Route::get('/cadastros', function () {
     return view('cadastros');
 });
 
+Route::get('/fabricantes', 'FabricanteController@index');
 Route::get('/fabricantes/adicionar', 'FabricanteController@create');
 Route::post('/fabricantes/adicionar', 'FabricanteController@store');
 
+Route::get('/pedidos', 'PedidosController@index')->name('pedidos.index');
+Route::get('/pedidos/novoPedido', 'PedidosController@novo')->name('pedidos.novo');
+Route::get('/pedidos/verPedido', 'PedidosController@ver')->name('pedidos.ver');
 
-Route::get('/novoPedido', function () {
-    return view('novoPedido');
-});
+Route::get('/produtos', 'ProdutosController@index')->name('produtos.index');
+Route::post('/produtos/excluir/{$id}', 'ProdutosController@excluir')->name('produtos.excluir');
+Route::get('/produtos/adicionar', 'ProdutosController@create');
+Route::post('/produtos/adicionar', 'ProdutosController@store');
 
-Route::get('/produtos', function () {
-    return view('produtos');
-});
 
-Route::get('/verPedido', function () {
-    return view('verPedido');
-});
 
-Route::get('/distribuidores', function () {
-    return view('distribuidores');
-});
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/distribuidores', 'DistribuidoresController@index')->name('distribuidores.index');
+Route::post('/distribuidores/excluir/{$id}', 'DistribuidoresController@excluir')->name('distribuidores.excluir');
+Route::get('/distribuidores/adicionar', 'DistribuidoresController@create')->name('distribuidores.create');
+Route::post('/distribuidores/adicionar', 'DistribuidoresController@store')->name('distribuidores.store');

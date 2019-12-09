@@ -33,6 +33,7 @@
 
 <body>
     <div id="app">
+
         @guest
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#top">
@@ -80,18 +81,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
 
                     <!-- header da área logada -->
+
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="meusDados.php">Meus dados</a>
+                            <a class="nav-link" href="/meusDados">Meus dados</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="cadastros">Cadastros</a>
+                            <a class="nav-link" href="/cadastros">Cadastros</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="verPedido">Pedidos</a>
+                            <a class="nav-link" href="/pedidos">Pedidos</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="dashboard">Relatórios</a>
+                            <a class="nav-link" href="/dashboard">Relatórios</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
