@@ -53,7 +53,7 @@
                                 <a class="nav-link" href="#produto">Planos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contato.php">Contato</a>
+                                <a class="nav-link" href="/contato">Contato</a>
                             </li>
                         </ul>
                     </div>
@@ -74,19 +74,19 @@
                     <!-- header da área logada -->
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="meusDados.php">Meus dados</a>
+                                <a class="nav-link" href="/meusDados">Meus dados</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="cadastros.php">Cadastros</a>
+                                <a class="nav-link" href="/cadastros">Cadastros</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="pedidos.php">Pedidos</a>
+                                <a class="nav-link" href="/pedidos">Pedidos</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="dashboard.php">Relatórios</a>
+                                <a class="nav-link" href="/dashboard">Relatórios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index.php">Sair</a>
+                                <a class="nav-link" href="/">Sair</a>
                             </li>
                         </ul>
                     </div>
