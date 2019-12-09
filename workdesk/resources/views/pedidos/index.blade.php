@@ -15,7 +15,7 @@
             </a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/novoPedido">
+            <a class="nav-link" href="/pedidos/novoPedido">
                 <span data-feather="layers"></span>
                 Inserir Pedido
             </a>
@@ -36,29 +36,27 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th scope="col">PEDCODI</th>
-          <th scope="col">EMISSAO</th>
-          <th scope="col">STATUS</th>
-          <th scope="col">CLIENTE</th>
-          <th scope="col">VALOR</th>
-          <th scope="col">EDITAR</th>
+          <th scope="col">Cód. Produto<</th>
+          <th scope="col">Data Emissão</th>
+          <th scope="col">Cód. Cliente</th>
+          <th scope="col">Valor</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row">5200001</th>
-          <td>01/09/2019</td>
-          <td>CONCLUIDO</td>
-          <td>ABC TECIDOS E DECORACOES</td>
-          <td>10.000,00</td>
+          @foreach ($pedidos as $pedido)
+          <td scope="row">{{ $pedido->id }}</th>
+          <td>{{ $pedido->dataPedido }}</td>
+          <td>{{ $pedido->idCliente }}</td>
+          <td>{{ $pedido->valorTotal }}</td>
           <td>
             <!-- Botão para acionar página de visualização -->
-            <a class="btn btn-primary" href="/verPedido" role="button">Detalhes</a>
+            <a class="btn btn-primary" href="/pedidos/verPedido" role="button">Detalhes</a>
           </td>
         </tr>
+        @endforeach
       </tbody>
     </table>
-
   </main>
-    
+</div> 
 @endsection

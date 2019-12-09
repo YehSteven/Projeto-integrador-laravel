@@ -35,16 +35,9 @@ Route::get('/fabricantes', 'FabricanteController@index');
 Route::get('/fabricantes/adicionar', 'FabricanteController@create');
 Route::post('/fabricantes/adicionar', 'FabricanteController@store');
 
-Route::get('/pedidos', function () {
-    return view('pedidos');
-});
-
-Route::get('/novoPedido', function () {
-    return view('novoPedido');
-});
-Route::get('/verPedido', function () {
-    return view('verPedido');
-});
+Route::get('/pedidos', 'PedidosController@index')->name('pedidos.index');
+Route::get('/pedidos/novoPedido', 'PedidosController@novo')->name('pedidos.novo');
+Route::get('/pedidos/verPedido', 'PedidosController@ver')->name('pedidos.ver');
 
 Route::get('/produtos', 'ProdutosController@index')->name('produtos.index');
 Route::post('/produtos/excluir/{$id}', 'ProdutosController@excluir')->name('produtos.excluir');

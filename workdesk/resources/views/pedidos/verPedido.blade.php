@@ -8,13 +8,13 @@
             <div class="sidebar-sticky">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#pedidosEnviados">
+                  <a class="nav-link active" href="/pedidos">
                     <span data-feather="layers"></span>
                     Pedidos Enviados
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#inserirPedido">
+                  <a class="nav-link" href="/novoPedido">
                     <span data-feather="layers"></span>
                     Inserir Pedido
                   </a>
