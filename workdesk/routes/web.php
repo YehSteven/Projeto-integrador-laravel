@@ -50,3 +50,6 @@ Route::get('/verPedido', function () {
 Route::get('/distribuidores', function () {
     return view('distribuidores');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
