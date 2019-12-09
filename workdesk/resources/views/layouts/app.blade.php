@@ -120,10 +120,10 @@
                 </div>
                 <div class="col-md-4 col-xl-3">
                 <ul class="nav-list">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="login.php">Login</a></li>
-                    <li><a href="cadastro.php">Cadastro</a></li>
-                    <li><a href="contato.php">Contato</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="login">Login</a></li>
+                    <li><a href="register">Cadastro</a></li>
+                    <li><a href="contato">Contato</a></li>
                 </ul>
                 </div>
                 <span class="copy col-12 my-3"> Copyright &copy; Workdesk</span>
