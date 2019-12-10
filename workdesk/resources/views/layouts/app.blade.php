@@ -36,7 +36,7 @@
 
         @guest
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#top">
+            <a class="navbar-brand" href="/#top">
                 <span>Workdesk</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -46,13 +46,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#top" title="Acessar início">Home</a>
+                        <a class="nav-link" href="/#top" title="Acessar início">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#myCarousel">Sobre</a>
+                        <a class="nav-link" href="/#myCarousel">Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#produto">Planos</a>
+                        <a class="nav-link" href="/#produto">Planos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contato">Contato</a>

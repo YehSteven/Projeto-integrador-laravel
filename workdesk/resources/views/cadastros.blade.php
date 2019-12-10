@@ -50,7 +50,7 @@
           </div>
 
           <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-          <a class="nav-link linkCaixas" href="fabricantes/adicionar" >
+          <a class="nav-link linkCaixas" href="/fabricantes" >
               <div class="card-body"  >
                   <h5 class="card-title">Fabricantes</h5>
                   <p class="card-text">Acompanhe e gerencie o cadastro dos seus fabricantes</p>

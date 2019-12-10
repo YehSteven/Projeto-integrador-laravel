@@ -8,8 +8,9 @@ use App\Fabricante;
 
 class FabricanteController extends Controller
 {
-    public function index(){
-        return view('fabricantes.index');
+    public function index(){   
+        $fabricantes = Fabricante::paginate(5);
+        return view('fabricantes.index',['fabricantes' => $fabricantes]);
     }
 
     public function show($id){

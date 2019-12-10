@@ -38,85 +38,58 @@
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Fabricantes cadastrados</h1>
-        <div class="btn-toolbar mb-2 mb-md-0">
-          <div class="btn-group mr-2">
-            <button class="btn btn-sm btn-outline-secondary">Share</button>
-            <button class="btn btn-sm btn-outline-secondary">Export</button>
-          </div>
-        </div>
       </div>
   
       <!-- Tabela com os Fabricantes adicionados anteriormente -->
       <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            <th scope="col">Cód. Fabricante</th>
             <th scope="col">CNPJ</th>
             <th scope="col">Razão Social</th>
             <th scope="col">Nome Fantasia</th>
-            <th scope="col">Editar</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>123.456.678.0001/12</td>
-            <td>XXX LTDA</td>
-            <td>Cliente 1</td>
-            <td>
-              <!-- Botão para acionar modal de exclusão -->
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluirFabricante">
-              Excluir Fabricante
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>123.456.678.0001/12</td>
-            <td>YYY LTDA</td>
-            <td>Cliente 2</td>
-            <td>
-              <!-- Botão para acionar modal de exclusão -->
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluirFabricante">
-              Excluir Fabricante
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>123.456.678.0001/12</td>
-            <td>ZZZ LTDA</td>
-            <td>Cliente 3</td>
-            <td>
-              <!-- Botão para acionar modal de exclusão -->
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluirFabricante">
-              Excluir Fabricante
-              </button>
-            </td>
-          </tr>
+          @foreach ($fabricantes as $fabricante)
+            <tr>
+              <td scope="row">{{ $fabricante->id }}</th>
+              <td>{{ $fabricante->cnpj }}</td>
+              <td>{{ $fabricante->razao_social }}</td>
+              <td>{{ $fabricante->nome_fantasia }}</td>
+              <td>
+                <!-- Botão para acionar modal de exclusão -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluirFabricante{{ $fabricante->id }}">
+                  Excluir
+                </button>
+
+                <!-- Modal excluir fabricante-->
+                <div class="modal fade" id="excluirFabricante{{ $fabricante->id }}" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="TituloModalCentralizado">Atenção!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                          Tem certeza que deseja excluir o Fabricante?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Excluir</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          @endforeach
         </tbody>
       </table>
-  
-      <!-- Modal excluir fabricante-->
-      <div class="modal fade" id="excluirFabricante" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="TituloModalCentralizado">Atenção!</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                Tem certeza que deseja excluir o Fabricante?
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-              <button type="button" class="btn btn-primary">Excluir</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      {{ $fabricantes->links() }}
+
           
       <!-- Formulário para adicionar fabricante-->
       <h2>Adicionar Fabricante</h2>
@@ -199,7 +172,7 @@
   
         </div>
         
-        <button class="btn btn-primary" type="submit">Adicionar Fabricante</button>
+        <button class="btn btn-primary" type="submit">Adicionar</button>
       </form>
         
           <!-- Modal excluir alterações-->
