@@ -84,7 +84,7 @@
       </div>
 
       <!-- Tabela com os itens do pedido que está sendo visualizado -->
-      <h3></h3>
+      <!-- <h3></h3>
       <h3 class="h2">Itens do Pedido</h3>
       <table class="table table-striped">
           <thead>
@@ -108,41 +108,41 @@
                   <td>0</td>
                   <td>5,30</td>
                   <td>1.060,00</td>
-                  <td>
+                  <td> -->
                       <!-- Botão para acionar modal de cancelamento -->
-                      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#excluirItemPedido">
-                          Excluir
-                      </button>
+                      <!-- <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#excluirItemPedido"> -->
+                          <!-- Excluir -->
+                      <!-- </button> -->
                       <!-- Botão para alterar Item de Pedido -->
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroPedidoItem">
+                      <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroPedidoItem">
                           Alterar
                       </button>
                   </td>
               </tr>
-              <tr>
-                  <th scope="row">1631116</th>
+              <tr> -->
+                  <!-- <th scope="row">1631116</th>
                   <td>RODIZIO ROMANO KIT (100 PC) - BRANCO</td>
                   <td>2000</td>
                   <td>10,16</td>
                   <td>0</td>
                   <td>10,16</td>
                   <td>20.320,00</td>
-                  <td>
+                  <td> -->
                       <!-- Botão para acionar modal de excluir Item de Pedido -->
-                      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#excluirItemPedido">
+                      <!-- <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#excluirItemPedido">
                           Excluir
-                      </button>
+                      </button> -->
                       <!-- Botão para alterar Item de Pedido -->
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroPedidoItem">
+                      <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroPedidoItem">
                           Alterar
                       </button>
                   </td>
               </tr>
           </tbody>
-      </table>  
+      </table>   -->
        
     <!-- Botão e modal para cancelar alterações-->
-      <button class="btn btn-secondary" type="data-dismiss" data-toggle="modal" data-target="#excluirAlteracoes">Fechar</button>
+      <!-- <button class="btn btn-secondary" type="data-dismiss" data-toggle="modal" data-target="#excluirAlteracoes">Fechar</button>
     
       <div class="modal fade" id="excluirAlteracoes" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -162,10 +162,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Botão e Modal Cancelar Pedido -->
-      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#cancelarPedido">
+      <!-- <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#cancelarPedido">
           Cancelar Pedido
       </button>
       
@@ -187,11 +187,11 @@
                   </div>
               </div>
           </div>
-      </div>
+      </div> -->
 
 
       <!-- Botão e modal para alterar -->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alterarPedido">
+      <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alterarPedido">
           Salvar Alterações
       </button>
 
@@ -213,7 +213,7 @@
                   </div>
               </div>
           </div>
-      </div>
+      </div> -->
 </main>
   
 
