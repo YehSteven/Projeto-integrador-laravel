@@ -83,18 +83,18 @@
                     <!-- header da área logada -->
 
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
+                        <!-- <li class="nav-item active">
                             <a class="nav-link" href="/meusDados">Meus dados</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item active">
                             <a class="nav-link" href="/cadastros">Cadastros</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="/pedidos">Pedidos</a>
                         </li>
-                        <li class="nav-item active">
+                        <!-- <li class="nav-item active">
                             <a class="nav-link" href="/dashboard">Relatórios</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -113,9 +113,9 @@
                                 </form>
                             </div>
                         </li>
-                        <li class="nav-item active">
+                        <!-- <li class="nav-item active">
                             <a class="nav-link" href="dashboard">Painel De Controle</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </nav>

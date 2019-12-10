@@ -3,25 +3,25 @@
 @section('content')
 
 <div class="container-fluid">
-        <div class="row">
-          <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
             <div class="sidebar-sticky">
-              <ul class="nav flex-column">
+                <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active" href="/pedidos">
+                    <a class="nav-link active" href="/pedidos">
                     <span data-feather="layers"></span>
                     Pedidos Enviados
-                  </a>
+                    </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/novoPedido">
+                    <a class="nav-link" href="/novoPedido">
                     <span data-feather="layers"></span>
                     Inserir Pedido
-                  </a>
+                    </a>
                 </li>
-              </ul>
+                </ul>
             </div>
-          </nav>
+        </nav>
   
     <!-- parte principal -->
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">

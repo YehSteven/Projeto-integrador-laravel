@@ -3,51 +3,49 @@
 @section('content')
 
 <div class="container-fluid">
-  <div class="row">
-    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-      <div class="sidebar-sticky">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link" href="/pedidos">
-              <span data-feather="layers"></span>
-              Pedidos Enviados
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="/pedidos/novoPedido">
-              <span data-feather="layers"></span>
-              Inserir Pedido
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-</div>
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/pedidos">
+                    <span data-feather="layers"></span>
+                    Pedidos Enviados
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/novoPedido">
+                    <span data-feather="layers"></span>
+                    Inserir Pedido
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </nav>
   
 <!-- parte principal -->
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-    <!-- parte principal -->
-    <div id= "pedidosEnviados" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Inserir Pedido</h1>
-    </div>
+      <!-- parte principal -->
+      <div id= "pedidosEnviados" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Inserir Pedido</h1>
+      </div>
 
     <form>
       <div class="form-row">
         <div class="col-md-4 mb-3">
-          <label for="pedPedCodi">PEDCODI</label>
+          <label for="pedPedCodi">Cód Cliente</label>
           <div class="input-group">
-            <input type="text" class="form-control is-invalid" id="pedPedCodi" placeholder="PEDCODI" aria-describedby="inputGroupPrepend3" required>
+            <input name="idCliente" type="text" class="form-control is-invalid" id="pedPedCodi" placeholder="1234" aria-describedby="inputGroupPrepend3" required>
             <div class="invalid-feedback">
-              Por favor, digite um PEDCODI.
+              Por favor, digite o Cód do Cliente.
             </div>
           </div>
         </div>
 
         <div class="col-md-4 mb-3">
-          <label for="pedDtEmissao">EMISSÃO</label>
+          <label for="pedDtEmissao">Data da Emissão</label>
           <div class="input-group">
-            <input type="text" class="form-control is-invalid" id="pedDtEmissao" placeholder="dd/mm/aaaa" aria-describedby="inputGroupPrepend3" required>
+            <input name="dataPedido" type="text" class="form-control is-invalid" id="pedDtEmissao" placeholder="dd/mm/aaaa" aria-describedby="inputGroupPrepend3" required>
             <div class="invalid-feedback">
               Por favor, digite a data de emissão.
             </div>
@@ -55,32 +53,36 @@
         </div>
               
         <div class="col-md-4 mb-3">
-          <label for="cliCNPJ">CNPJ Cliente</label>
-          <input type="text" class="form-control is-valid" id="cliCNPJ" placeholder="12.123.123/0001-12" required>
+          <label for="cliCNPJ">Cód. Fonecedor</label>
+          <input name="idFornecedor" type="text" class="form-control is-valid" id="cliCNPJ" placeholder="12.123.123/0001-12" required>
           <div class="valid-feedback">
             Tudo certo!
           </div>
         </div>
 
-        <!-- Preenchido automaticamente -->
         <div class="form-group col-md-6">
-            <label for="cliNome">Nome Cliente</label> 
-            <input type="text" name="cliNome" id="cliNome" class="form-control" value="Nome do Cliente">
+            <label for="cliNome">Cód. Usuário</label> 
+            <input name="idUsuario" type="text" name="cliNome" id="cliNome" class="form-control" value="Nome do Cliente">
         </div>
         
         <div class="form-group col-md-6">
-            <label for="vendedor">Vendedor</label> 
-            <input type="text" name="vendedor" id="vendedor" class="form-control" value="Vendedor">
+            <label for="vendedor">Valor total</label> 
+            <input name="valorTotal" type="text" name="vendedor" id="vendedor" class="form-control" value="Vendedor">
         </div>
-        <div class="form-group col-md-6">
-            <label for="transportadora">Transportadora</label> 
-            <input type="text" name="transportadora" id="transportadora" class="form-control" value="Transportadora">
-        </div>
+
+        <!-- Botão para adicionar o item preenchido -->
+        <form method="POST" action="/pedidos/novoPedido">
+          @csrf
+          {{ method_field('POST') }}
+          <button type="submit" class="btn btn-primary">
+            Adicionar
+          </button>
+        </form>
       
       </div>
-    
 
       <!-- Tabela com os itens do pedido que está sendo visualizado -->
+      <h3></h3>
       <h3 class="h2">Itens do Pedido</h3>
       <table class="table table-striped">
           <thead>
@@ -134,27 +136,9 @@
                       </button>
                   </td>
               </tr>
-              <tr>
-                  <th scope="row">NOVO</th>
-                  <td>NOVO</td>
-                  <td>NOVO</td>
-                  <td>NOVO</td>
-                  <td>NOVO</td>
-                  <td>NOVO</td>
-                  <td>NOVO</td>
-                  <td>
-                      <!-- Botão para adicionar o item preenchido -->
-                      <button type="button" class="btn btn-primary">
-                          Adicionar
-                      </button>
-                  </td>
-              </tr>
           </tbody>
       </table>  
-      <!-- <label for="tabPrecoNome" style="margin-left: 23%">TABELA DE PREÇOS</label><br> -->
-
-  
-    
+       
     <!-- Botão e modal para cancelar alterações-->
       <button class="btn btn-secondary" type="data-dismiss" data-toggle="modal" data-target="#excluirAlteracoes">Fechar</button>
     

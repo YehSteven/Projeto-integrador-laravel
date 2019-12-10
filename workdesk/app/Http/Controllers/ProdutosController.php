@@ -18,9 +18,9 @@ class ProdutosController extends Controller
 
     // esta função apaga o produto no banco de dados
     public function excluir($id){
-        $excluirPproduto = Produto::find($id);
+        $excluirProduto = Produto::find($id);
         $excluirProduto->delete();
-        return redirect('/produtos');
+        return redirect('produtos.index');
     }
 
     public function create(){

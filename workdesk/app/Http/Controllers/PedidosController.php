@@ -20,6 +20,26 @@ class PedidosController extends Controller
         return view('pedidos.novoPedido');
     }
 
+
+    public function store(Request $request){
+        $request->validate([
+            'dataPedido' => 'required',
+            'idCliente' => 'required|max:11',
+            'idFornecedor' => 'required|max:11',
+            'idUsuario' => 'required|max:11',
+            'valorTotal' => 'required',
+        ]);
+        $pedido = Pedido::novo([
+            'dataPedido' => $request->input('dataPedido'),
+            'idCliente' => $request->input('idCliente'),
+            'idFornecedor' => $request->input('idFornecedor'),
+            'idUsuario' => $request->input('idUsuario'),
+            'valorTotal' => $request->input('valorTotal'),
+        ]); 
+        return redirect('/novoPedido');
+    }
+
+
     public function ver(){
         return view('pedidos.verPedido');
     }

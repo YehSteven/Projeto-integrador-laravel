@@ -76,7 +76,11 @@
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                            <button type="submit" class="btn btn-primary" formmethod="POST" formaction="/produtos/excluir/{{ $produto->id }}">Excluir</button>
+                            <form action="/produtos/excluir/{{ $produto->id }}" method="POST">
+                                @csrf
+                                {{ method_field('DELETE') }}
+                                <button id="delete-contact" type="submit" class="btn btn-primary">Excluir</button>
+                            </form>
                           </div>
                         </div>
                       </div>
