@@ -18,7 +18,7 @@ class CreatePedidoItemTable extends Migration
             $table->integer('idPedido');
             $table->integer('idProduto');
             $table->double('precoUnitario');
-            $table->float('quantidadeProduto', 8, 2);
+            $table->float('quantidadeProduto');
             $table->double('valorTotal');
             $table->timestamps();
         });

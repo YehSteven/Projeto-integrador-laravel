@@ -55,7 +55,7 @@
                       <input type="text" name="vendedor" id="vendedor" class="form-control" value="Vendedor">
                   </div>
                   <div class="form-group col-md-6">
-                      <label for="transportadora">Transportadota</label> 
+                      <label for="transportadora">Transportadora</label> 
                       <input type="text" name="transportadora" id="transportadora" class="form-control" value="Transportadora">
                   </div>
               </div>

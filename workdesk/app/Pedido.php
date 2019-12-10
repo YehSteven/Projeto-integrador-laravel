@@ -9,7 +9,7 @@ class Pedido extends Model
     protected $table = "pedidos";
     protected $primaryKey = "id";
     protected $fillable = [
-        "dataPedido", "idCliente", "idForncecedor", "idUsuario", "valorTotal"
+        "dataPedido", "idCliente", "idFornecedor", "idUsuario", "valorTotal"
     ];
 
 }

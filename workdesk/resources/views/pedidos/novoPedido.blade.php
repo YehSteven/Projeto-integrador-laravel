@@ -30,7 +30,11 @@
           <h1 class="h2">Inserir Pedido</h1>
       </div>
 
-    <form>
+      <form method="POST" action="/pedidos/novoPedido">
+          @csrf
+          {{ method_field('POST') }}
+
+
       <div class="form-row">
         <div class="col-md-4 mb-3">
           <label for="pedPedCodi">Cód Cliente</label>
@@ -45,7 +49,7 @@
         <div class="col-md-4 mb-3">
           <label for="pedDtEmissao">Data da Emissão</label>
           <div class="input-group">
-            <input name="dataPedido" type="text" class="form-control is-invalid" id="pedDtEmissao" placeholder="dd/mm/aaaa" aria-describedby="inputGroupPrepend3" required>
+            <input name="dataPedido" type="date" class="form-control is-invalid" id="pedDtEmissao" placeholder="dd/mm/aaaa" aria-describedby="inputGroupPrepend3" required>
             <div class="invalid-feedback">
               Por favor, digite a data de emissão.
             </div>
@@ -62,18 +66,16 @@
 
         <div class="form-group col-md-6">
             <label for="cliNome">Cód. Usuário</label> 
-            <input name="idUsuario" type="text" name="cliNome" id="cliNome" class="form-control" value="Nome do Cliente">
+            <input name="idUsuario" type="text" name="cliNome" id="cliNome" class="form-control" placeholder="123">
         </div>
         
         <div class="form-group col-md-6">
             <label for="vendedor">Valor total</label> 
-            <input name="valorTotal" type="text" name="vendedor" id="vendedor" class="form-control" value="Vendedor">
+            <input name="valorTotal" type="text" name="vendedor" id="vendedor" class="form-control" placeholder="123">
         </div>
 
         <!-- Botão para adicionar o item preenchido -->
-        <form method="POST" action="/pedidos/novoPedido">
-          @csrf
-          {{ method_field('POST') }}
+
           <button type="submit" class="btn btn-primary">
             Adicionar
           </button>

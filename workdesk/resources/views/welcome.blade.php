@@ -60,7 +60,7 @@
                 <h1 class="col-12">Faça o teste!</h1>
                 <p class="col-10 offset-1">Experimente 30 dias grátis</p>
             </div>
-            <a href="login.php" class="btn btn-primary">Experimente!</a>
+            <a href="/register" class="btn btn-primary">Experimente!</a>
         </section>
     
         <div id="produto" class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
