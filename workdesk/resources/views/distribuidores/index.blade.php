@@ -51,6 +51,7 @@
             <th scope="col">Nome Fantasia</th>
           </tr>
         </thead>
+        
         <tbody>
           @foreach ($distribuidores as $distribuidor)
             <tr>
@@ -87,13 +88,15 @@
             </tr>
           @endforeach
         </tbody>
+        
       </table>
+      
       {{ $distribuidores->links() }}
   
 
       <!-- Adionar distribuidor-->
       <div>    
-        <h2>Adicionar distribuidor</h2>
+        <h2>Adicionar Distribuidor</h2>
         
         <form method="POST" action="/distribuidores/adicionar">
         @csrf
@@ -109,7 +112,7 @@
                 </div>
               </div>
             </div>
-              
+            
             <div class="col-md-4 mb-3">
               <label for="validationRazaoSocial">Razão Social</label>
               <div class="input-group">
@@ -165,7 +168,7 @@
             </div>
     
           </div>
-          
+          <hr>
           <button class="btn btn-primary" type="submit">Adicionar</button>
       </div>
     </main>

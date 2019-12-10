@@ -93,7 +93,7 @@
           {{ $produtos->links() }}
         </div>
 
-  
+        
         <!-- Formulário para adicionar produto-->
         <div> 
           <h2>Adicionar Produto</h2>
@@ -114,6 +114,7 @@
                 <div class="invalid-feedback">Por favor, digite o preço do produto.</div>
               </div>
             </div>
+            <hr>
             <button class="btn btn-primary" type="submit">Adicionar Produto</button>
           </form>
         </div>

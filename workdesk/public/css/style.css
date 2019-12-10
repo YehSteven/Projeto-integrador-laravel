@@ -25,6 +25,9 @@ h1 {
     font-weight: bold;
     text-align: center;
 }
+b{
+    color: #606060;
+}
 .btn-dark:hover {
     background-color: darkred;
 }
