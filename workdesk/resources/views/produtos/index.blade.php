@@ -103,13 +103,13 @@
             <div class="form-row">
               <div class="col-md-4 mb-3">
                 <label for="validationNomeProd">Nome do Produto</label>
-                <input type="text" class="form-control is-valid" id="validationNomeProd" placeholder="Nome do Produto" required name="nomeProduto">
+                <input type="text" class="form-control" id="validationNomeProd" placeholder="Nome do Produto" required name="nomeProduto">
                 <!-- ADICIONAR CONDICIONAL PARA A VALIDAÇÃO -->
                 <div class="invalid-feedback">Por favor, digite o nome do produto.</div>
               </div>
               <div class="col-md-4 mb-3">
                 <label for="validationUnMedida">Preço</label>
-                <input type="text" class="form-control is-valid" id="validationUnMedida" placeholder="Unidade de medida" required name="preco">
+                <input type="text" class="form-control" id="validationUnMedida" placeholder="Unidade de medida" required name="preco">
                 <!-- ADICIONAR CONDICIONAL PARA A VALIDAÇÃO -->
                 <div class="invalid-feedback">Por favor, digite o preço do produto.</div>
               </div>

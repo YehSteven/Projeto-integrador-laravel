@@ -39,7 +39,7 @@
         <div class="col-md-4 mb-3">
           <label for="pedPedCodi">Cód Cliente</label>
           <div class="input-group">
-            <input name="idCliente" type="text" class="form-control is-invalid" id="pedPedCodi" placeholder="1234" aria-describedby="inputGroupPrepend3" required>
+            <input name="idCliente" type="text" class="form-control" id="pedPedCodi" placeholder="1234" aria-describedby="inputGroupPrepend3" required>
             <div class="invalid-feedback">
               Por favor, digite o Cód do Cliente.
             </div>
@@ -49,7 +49,7 @@
         <div class="col-md-4 mb-3">
           <label for="pedDtEmissao">Data da Emissão</label>
           <div class="input-group">
-            <input name="dataPedido" type="date" class="form-control is-invalid" id="pedDtEmissao" placeholder="dd/mm/aaaa" aria-describedby="inputGroupPrepend3" required>
+            <input name="dataPedido" type="date" class="form-control" id="pedDtEmissao" placeholder="dd/mm/aaaa" aria-describedby="inputGroupPrepend3" required>
             <div class="invalid-feedback">
               Por favor, digite a data de emissão.
             </div>
@@ -58,7 +58,7 @@
               
         <div class="col-md-4 mb-3">
           <label for="cliCNPJ">Cód. Fonecedor</label>
-          <input name="idFornecedor" type="text" class="form-control is-valid" id="cliCNPJ" placeholder="12.123.123/0001-12" required>
+          <input name="idFornecedor" type="text" class="form-control" id="cliCNPJ" placeholder="12.123.123/0001-12" required>
           <div class="valid-feedback">
             Tudo certo!
           </div>

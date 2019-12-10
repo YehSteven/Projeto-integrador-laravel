@@ -103,7 +103,7 @@
           <div class="col-md-4 mb-3">
             <label for="cnpj">CNPJ</label>
             <div class="input-group">
-              <input name="cnpj" type="text" class="form-control is-invalid"  id="cnpj" placeholder="CNPJ" aria-describedby="inputGroupPrepend3" required>
+              <input name="cnpj" type="text" class="form-control"  id="cnpj" placeholder="CNPJ" aria-describedby="inputGroupPrepend3" required>
               <div class="invalid-feedback">
                 Por favor, digite um CNPJ.
               </div>
@@ -113,7 +113,7 @@
           <div class="col-md-4 mb-3">
             <label for="razao_social">Razão Social</label>
             <div class="input-group">
-              <input name="razao_social" type="text" class="form-control is-invalid" id="razao_social" placeholder="Razão Social" aria-describedby="inputGroupPrepend3">
+              <input name="razao_social" type="text" class="form-control" id="razao_social" placeholder="Razão Social" aria-describedby="inputGroupPrepend3">
               <div class="invalid-feedback">
                 Por favor, digite a Razão Social.
               </div>
@@ -122,7 +122,7 @@
          
           <div class="col-md-4 mb-3">
             <label for="nome_fantasia">Nome Fantasia</label>
-            <input name="nome_fantasia" type="text" class="form-control is-valid" id="nome_fantasia" placeholder="Nome Fantasia" value="Empresa Xpto" required>
+            <input name="nome_fantasia" type="text" class="form-control" id="nome_fantasia" placeholder="Nome Fantasia" required>
             <div class="valid-feedback">
               Tudo certo!
             </div>
@@ -130,40 +130,40 @@
             
           <div class="col-md-4 mb-3">
             <label for="logradouro">Logradouro</label>
-            <input name="logradouro" type="text" class="form-control is-valid" id="logradouro" placeholder="Logradouro" value="Rua das Flores" required>
+            <input name="logradouro" type="text" class="form-control" id="logradouro" placeholder="Logradouro" required>
             <div class="valid-feedback">Tudo certo!</div>
           </div>
   
           <div class="col-md-4 mb-3">
             <label for="numero">Número</label>
-            <input name="numero" type="text" class="form-control is-valid" id="numero" placeholder="numero" value="123" required>
+            <input name="numero" type="text" class="form-control" id="numero" placeholder="numero" required>
             <div class="valid-feedback">Tudo certo!</div>
           </div>
   
           <div class="col-md-4 mb-3">
             <label for="bairro">Bairro</label>
-            <input name="bairro" type="text" class="form-control is-valid" id="bairro" placeholder="Bairro" value="Centro" required>
+            <input name="bairro" type="text" class="form-control" id="bairro" placeholder="Bairro" required>
             <div class="valid-feedback">Tudo certo!</div>
           </div>
   
           <div class="form-row">
             <div class="col-md-6 mb-3">
               <label for="cidade">Cidade</label>
-              <input name="cidade" type="text" class="form-control is-invalid" id="cidade" placeholder="Cidade" required>
+              <input name="cidade" type="text" class="form-control" id="cidade" placeholder="Cidade" required>
               <div class="invalid-feedback">
                 Por favor, informe uma cidade válida.
               </div>
             </div>
             <div class="col-md-3 mb-3">
               <label for="estado">Estado</label>
-              <input name="estado" type="text" class="form-control is-invalid" id="estado" placeholder="Estado" required>
+              <input name="estado" type="text" class="form-control" id="estado" placeholder="Estado" required>
               <div class="invalid-feedback">
                 Por favor, informe um estado válido.
               </div>
             </div>
             <div class="col-md-3 mb-3">
               <label for="cep">CEP</label>
-              <input name="cep" type="text" class="form-control is-invalid" id="cep" placeholder="CEP" required>
+              <input name="cep" type="text" class="form-control" id="cep" placeholder="CEP" required>
               <div class="invalid-feedback">
                 Por favor, informe um CEP válido.
               </div>

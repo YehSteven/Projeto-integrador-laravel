@@ -106,7 +106,7 @@
             <div class="col-md-4 mb-3">
               <label for="validationServerCNPJ">CNPJ</label>
               <div class="input-group">
-                <input name="cnpj" type="text" class="form-control is-invalid" id="validationServerCNPJ" placeholder="CNPJ" aria-describedby="inputGroupPrepend3" required>
+                <input name="cnpj" type="text" class="form-control" id="validationServerCNPJ" placeholder="CNPJ" aria-describedby="inputGroupPrepend3" required>
                 <div class="invalid-feedback">
                   Por favor, digite um CNPJ.
                 </div>
@@ -116,7 +116,7 @@
             <div class="col-md-4 mb-3">
               <label for="validationRazaoSocial">Razão Social</label>
               <div class="input-group">
-                <input name="razaoSocial" type="text" class="form-control is-invalid" id="validationRazaoSocial" placeholder="Razão Social" aria-describedby="inputGroupPrepend3" required>
+                <input name="razaoSocial" type="text" class="form-control" id="validationRazaoSocial" placeholder="Razão Social" aria-describedby="inputGroupPrepend3" required>
                 <div class="invalid-feedback">
                   Por favor, digite a Razão Social.
                 </div>
@@ -125,7 +125,7 @@
           
             <div class="col-md-4 mb-3">
               <label for="validationNomeFantasia">Nome Fantasia</label>
-              <input name="nomeFantasia" type="text" class="form-control is-valid" id="validationNomeFantasia" placeholder="Nome Fantasia" value="Empresa Xpto" required>
+              <input name="nomeFantasia" type="text" class="form-control" id="validationNomeFantasia" placeholder="Nome Fantasia"  required>
               <div class="valid-feedback">
                 Tudo certo!
               </div>
@@ -133,34 +133,34 @@
               
             <div class="col-md-4 mb-3">
               <label for="validationServer01">Logradouro</label>
-              <input name="logradouro" type="text" class="form-control is-valid" id="validationServer01" placeholder="Logradouro" value="Rua das Flores" required>
+              <input name="logradouro" type="text" class="form-control" id="validationServer01" placeholder="Rua xxxxx" required>
               <div class="valid-feedback">Tudo certo!</div>
             </div>
     
             <div class="col-md-4 mb-3">
               <label for="validationServer01">Número</label>
-              <input name="numero" type="text" class="form-control is-valid" id="validationServer01" placeholder="numero" value="123" required>
+              <input name="numero" type="text" class="form-control" id="validationServer01" placeholder="546" required>
               <div class="valid-feedback">Tudo certo!</div>
             </div>
     
             <div class="form-row">
               <div class="col-md-6 mb-3">
                 <label for="validationServer03">Cidade</label>
-                <input name="cidade" type="text" class="form-control is-invalid" id="validationServer03" placeholder="Cidade" required>
+                <input name="cidade" type="text" class="form-control" id="validationServer03" placeholder="São Paulo" required>
                 <div class="invalid-feedback">
                   Por favor, informe uma cidade válida.
                 </div>
               </div>
               <div class="col-md-3 mb-3">
                 <label for="validationServer04">Estado</label>
-                <input name="estado" type="text" class="form-control is-invalid" id="validationServer04" placeholder="Estado" required>
+                <input name="estado" type="text" class="form-control" id="validationServer04" placeholder="SP" required>
                 <div class="invalid-feedback">
                   Por favor, informe um estado válido.
                 </div>
               </div>
               <div class="col-md-3 mb-3">
                 <label for="validationServer05">CEP</label>
-                <input name="cep" type="text" class="form-control is-invalid" id="validationServer05" placeholder="CEP" required>
+                <input name="cep" type="text" class="form-control" id="validationServer05" placeholder="04087001" required>
                 <div class="invalid-feedback">
                   Por favor, informe um CEP válido.
                 </div>
