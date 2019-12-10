@@ -45,7 +45,7 @@
               <a class="nav-link" href="distribuidores">
               <div class="card-body"  >
                   <h5 class="card-title">Distribuidores</h5>
-                  <p class="card-text">Acompanhe e gerencie o cadastro dos seus distribuidores</p>
+                  <p class="card-text">Acompanhe e gerencie o cadastro dos seus Distribuidores</p>
               </div>
           </div>
 
@@ -53,7 +53,7 @@
           <a class="nav-link linkCaixas" href="/fabricantes" >
               <div class="card-body"  >
                   <h5 class="card-title">Fabricantes</h5>
-                  <p class="card-text">Acompanhe e gerencie o cadastro dos seus fabricantes</p>
+                  <p class="card-text">Acompanhe e gerencie o cadastro dos seus Fabricantes</p>
               </div>
           </div>    
 
@@ -61,7 +61,7 @@
               <a class="nav-link" href="produtos">
               <div class="card-body"  >
                   <h5 class="card-title">Produtos</h5>
-                  <p class="card-text">Acompanhe e gerencie os produtos que você vende</p>
+                  <p class="card-text">Acompanhe e gerencie os produtos que você vendeu</p>
               </div>
           </div>
       </div>

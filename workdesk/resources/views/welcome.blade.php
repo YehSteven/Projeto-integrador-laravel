@@ -21,7 +21,7 @@
                     <div class="container">
                         <div class="carousel-caption text-allign">
                         <h1>Agora ficou mais fácil</h1>
-                        <p>Saiba quanto está ganhando com um simples toque</p>
+                        <p><b>Saiba quanto está ganhando com um simples toque</b></p>
                         </div>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                     <div class="container">
                         <div class="carousel-caption text-allign">
                         <h1>Mobilidade</h1>
-                        <p>Acesse de onde estiver</p>
+                        <p><b>Acesse de onde estiver</b></p>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                     <div class="container">
                         <div class="carousel-caption text-allign">
                         <h1>O fim dos papéis</h1>
-                        <p>Criamos relatórios perfeitos para você</p>
+                        <p><b>Criamos relatórios perfeitos para você</b></p>
                         </div>
                     </div>
                 </div>

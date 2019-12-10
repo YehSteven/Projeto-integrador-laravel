@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="{{ asset('css/contato.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="workdesk/public/css/css/estilo.css">
 </head>
 
 <body>

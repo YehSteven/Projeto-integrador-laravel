@@ -169,9 +169,9 @@
               </div>
             </div>
           </div>
-  
-        </div>
         
+        </div>
+        <hr>
         <button class="btn btn-primary" type="submit">Adicionar</button>
       </form>
         

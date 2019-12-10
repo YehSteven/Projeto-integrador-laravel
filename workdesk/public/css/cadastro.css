@@ -1,5 +1,25 @@
 .container {
     max-width: 960px;
+    
   }
+
+h5, p {
+  color: white;
+}
+
+.font{
+  color: black;
+}
+
+div nav ul{
+  justify-content: left;
+  align-items: left;
+}
+
+main {
+  justify-content: center;
+  align-items: center;
+}
+
   
   .lh-condensed { line-height: 1.25; }
